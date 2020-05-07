@@ -1,4 +1,6 @@
-function keycode (){
-    let key = event.keyCode;
-    console.log(key);
-}
+// const myHeading = document.getElementById("myheading");
+
+// myHeading.addEventListener("keydown", ()=>{
+//     myHeading.style.color = "red;"
+// })
+
