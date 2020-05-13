@@ -1,1 +1,35 @@
+*{
+    background-color: #119DA4;
+    font-family: 'Pangolin', cursive;
+}
 
+.wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#newGame{
+    background-color: #D7D9CE;
+    border-radius: 6px;
+    border: none;
+    color: #0C7489;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+}
+#roll{
+    background-color: #B8D8D8;
+    border-radius: 6px;
+    border: none;
+    color: #0C7489;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+}
+.currentScore{
+    border: 1px gray;
+}
