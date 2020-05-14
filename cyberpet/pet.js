@@ -3,6 +3,7 @@ class Animal{
     this._name = name;
     this._hunger = 100;
     this._thirst = 100;
+    this._happiness = 100;
     }
     get name(){
         return this._name;
@@ -13,11 +14,17 @@ class Animal{
     get thirst(){
         return this._thirst;
     }
+    get happiness(){
+        return this._happiness;
+    }
     eat(){
         this._hunger--;
     }
     drink(){
         this._thirst--;
+    }
+    happiness(){
+        this._happiness--;
     }
 }
 
@@ -54,3 +61,26 @@ class Fish extends Animal{
 // console.log(buster.thirst); // Prints Buster and thirst stat in the terminal
 const buster2 = new Dog ("Buster2", true); // Creates a new dog called Buster2
 console.log(buster2); // Prints Buster in the terminal with all stats
+const ginger = new Cat ("Ginger", false);
+console.log(ginger);
+
+let dogPic = document.getElementById("dogPic");
+let catPic = document.getElementById("catPic");
+let fishPic = document.getElementById("fishPic");
+
+let buttons = document.getElementsByClassName("buttons");
+
+dogPic.addEventListener("click", ()=>{
+    catPic.style.visibility = "hidden";
+    fishPic.style.visibility = "hidden";
+    // dogPic.style.justifyContent = "center";
+    // buttons.style.display = "block";
+});
+catPic.addEventListener("click", ()=>{
+    dogPic.style.visibility = "hidden";
+    fishPic.style.visibility = "hidden";
+});
+fishPic.addEventListener("click", ()=>{
+    dogPic.style.visibility = "hidden";
+    catPic.style.visibility = " hidden";
+});
