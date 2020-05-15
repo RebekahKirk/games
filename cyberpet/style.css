@@ -5,25 +5,24 @@
     align-items: center;
     text-align: center;
 }
-.mainBody{
+
+.h1{
     font-family: 'Permanent Marker', cursive;
 }
-.buttons{
-    display: inline;
-}
-#food{
+
+#foodButton{
     border-radius: 6px;
     border-color: grey;
     width: 200px;
     padding: 10px;
 }
-#drink{
+#drinkButton{
     border-radius: 6px;
     border-color: grey;
     width: 200px;
     padding: 10px;
 }
-#love{
+#playButton{
     border-radius: 6px;
     border-color: grey;
     width: 200px;

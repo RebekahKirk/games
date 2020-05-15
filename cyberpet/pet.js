@@ -1,5 +1,15 @@
+let pet = "choosing";
+
+let foodButton = document.getElementById("foodButton");
+let drinkButton = document.getElementById("drinkButton");
+let playButton = document.getElementById("playButton");
+
+let hungerLevel = document.getElementById("hungerLevel");
+let thirstLevel = document.getElementById("thirstLevel");
+let happinessLevel = document.getElementById("happinessLevel");
+
 class Animal{
-    constructor(name){
+    constructor(name, hunger, thirst, happiness){
     this._name = name;
     this._hunger = 100;
     this._thirst = 100;
@@ -56,13 +66,7 @@ class Fish extends Animal{
     }
 }
 
-// const buster = new Animal ("Buster"); // Creates a new animal called Buster
-// console.log(buster.name); //Prints Buster in the terminal
-// console.log(buster.thirst); // Prints Buster and thirst stat in the terminal
-const buster2 = new Dog ("Buster2", true); // Creates a new dog called Buster2
-console.log(buster2); // Prints Buster in the terminal with all stats
-const ginger = new Cat ("Ginger", false);
-console.log(ginger);
+let Buster = new Animal ("Buster", 50, 50, 50);
 
 let dogPic = document.getElementById("dogPic");
 let catPic = document.getElementById("catPic");
@@ -71,16 +75,26 @@ let fishPic = document.getElementById("fishPic");
 let buttons = document.getElementsByClassName("buttons");
 
 dogPic.addEventListener("click", ()=>{
-    catPic.style.visibility = "hidden";
+    pet = "dog";
+    dogPic.style.visibility = "hidden"
+    catPic.style.visibility = "visible";
     fishPic.style.visibility = "hidden";
-    // dogPic.style.justifyContent = "center";
-    // buttons.style.display = "block";
+    catPic.src= "dog.png";
 });
 catPic.addEventListener("click", ()=>{
+    pet = "cat";
     dogPic.style.visibility = "hidden";
     fishPic.style.visibility = "hidden";
 });
-fishPic.addEventListener("click", ()=>{
+fishPic.addEventListener("click", ()=>{     
+    pet = "fish";
+    fishPic.style.visibility = "hidden"
     dogPic.style.visibility = "hidden";
-    catPic.style.visibility = " hidden";
+    catPic.style.visibility = " visible";
+    catPic.src = "fish.png";
 });
+
+const feed = () =>{
+    hungerLevel.innerHTML = (`Hunger Level: ${Animal._hunger--}`); 
+}
+foodButton.addEventListener = ("click", feed);
