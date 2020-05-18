@@ -1,5 +1,3 @@
-let pet = "choosing";
-
 let foodButton = document.getElementById("foodButton");
 let drinkButton = document.getElementById("drinkButton");
 let playButton = document.getElementById("playButton");
@@ -66,7 +64,7 @@ class Fish extends Animal{
     }
 }
 
-let Buster = new Animal ("Buster", 50, 50, 50);
+// let Buster = new Animal ("Buster", 50, 50, 50);
 
 let dogPic = document.getElementById("dogPic");
 let catPic = document.getElementById("catPic");
@@ -94,7 +92,7 @@ fishPic.addEventListener("click", ()=>{
     catPic.src = "fish.png";
 });
 
-const feed = () =>{
-    hungerLevel.innerHTML = (`Hunger Level: ${Animal._hunger--}`); 
-}
-foodButton.addEventListener = ("click", feed);
+// const feed = () =>{
+//     hungerLevel.innerHTML = (`Hunger Level: ${Animal._hunger--}`); 
+// }
+// foodButton.addEventListener = ("click", feed);

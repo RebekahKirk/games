@@ -1,30 +1,46 @@
 .wrapper{
     display: flex;
+    border: none;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.h1{
+    height:100%;
+    width: 100%;
+    background-color:#FBCAEF;
+    background-image: linear-gradient(to bottom right,#FBCAEF,#7D8CC4,#726DA8);
     font-family: 'Permanent Marker', cursive;
+    font-size: x-large;
+    font-weight: 500;
 }
+/* .h1{
+    font-family: 'Permanent Marker', cursive;
+} */
 
 #foodButton{
+    background-color: #AAFFE5;
     border-radius: 6px;
-    border-color: grey;
+    border-color: #3590F3;
     width: 200px;
     padding: 10px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: large;
 }
 #drinkButton{
+    background-color: #AAFFE5;
     border-radius: 6px;
-    border-color: grey;
+    border-color: #3590F3;
     width: 200px;
     padding: 10px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: large;
 }
 #playButton{
+    background-color: #AAFFE5;
     border-radius: 6px;
-    border-color: grey;
+    border-color:#3590F3;
     width: 200px;
     padding: 10px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: large;
 }
