@@ -6,12 +6,14 @@ let hungerLevel = document.getElementById("hungerLevel");
 let thirstLevel = document.getElementById("thirstLevel");
 let happinessLevel = document.getElementById("happinessLevel");
 
+let newCat; 
+
 class Animal{
     constructor(name, hunger, thirst, happiness){
-    this._name = name;
-    this._hunger = 100;
-    this._thirst = 100;
-    this._happiness = 100;
+        this._name = name;
+        this._hunger = 50;
+        this._thirst = 100;
+        this._happiness = 100;
     }
     get name(){
         return this._name;
@@ -26,7 +28,7 @@ class Animal{
         return this._happiness;
     }
     eat(){
-        this._hunger--;
+        this._hunger++;
     }
     drink(){
         this._thirst--;
@@ -37,34 +39,20 @@ class Animal{
 }
 
 class Dog extends Animal{
-    constructor(name, lovesBarking){
+    constructor(name){
         super(name);
-        this._lovesBarking = lovesBarking;
-    }
-    get lovesBarking(){
-        return this._lovesBarking;
     }
 }
 class Cat extends Animal{
-    constructor(name, lovesPlaying){
+    constructor(name){
         super(name);
-        this._lovesPlaying = lovesPlaying;
-    }
-    get lovesPlaying(){
-        return this._lovesPlaying;
     }
 }
 class Fish extends Animal{
     constructor(name, lovesSwimming){
         super(name);
-        this._lovesSwimming = lovesSwimming;
-    }
-    get lovesSwimming(){
-        return this._lovesSwimming;
     }
 }
-
-// let Buster = new Animal ("Buster", 50, 50, 50);
 
 let dogPic = document.getElementById("dogPic");
 let catPic = document.getElementById("catPic");
@@ -79,11 +67,18 @@ dogPic.addEventListener("click", ()=>{
     fishPic.style.visibility = "hidden";
     catPic.src= "dog.png";
 });
+
 catPic.addEventListener("click", ()=>{
     pet = "cat";
     dogPic.style.visibility = "hidden";
     fishPic.style.visibility = "hidden";
+
+    newCat = new Cat ("Meow");
+    console.log(newCat);
+    newCat.eat();
+    console.log(newCat);
 });
+
 fishPic.addEventListener("click", ()=>{     
     pet = "fish";
     fishPic.style.visibility = "hidden"
@@ -92,7 +87,10 @@ fishPic.addEventListener("click", ()=>{
     catPic.src = "fish.png";
 });
 
-// const feed = () =>{
-//     hungerLevel.innerHTML = (`Hunger Level: ${Animal._hunger--}`); 
-// }
-// foodButton.addEventListener = ("click", feed);
+let hungerNum = document.getElementById("hungerNum");
+let thirstNum = document.getElementById("thirstNum");
+let happinessNum = document.getElementById("happinessNum");
+
+foodButton.addEventListener("click", () =>{
+    hungerLevel.textContent=newCat.hunger;
+})
